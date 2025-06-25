@@ -6,8 +6,8 @@ services:
     plan: free
     region: oregon
     buildCommand: |
-      apt-get update
-      apt-get install -y python3 make g++
+      apt-get update && \
+      apt-get install -y python3 make g++ && \
       npm install --legacy-peer-deps
-    startCommand: 'npm start'
+    startCommand: npm start
     version: "1"
