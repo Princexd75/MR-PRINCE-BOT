@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: SHANKAR-BOT-SS
+    name: MR-PRINCE-BOT-2
     runtime: node
-    repo: https://github.com/sk7295/SHANKAR-BOT-SS
+    repo: https://github.com/sk7295/fca-shankar-bot
     plan: free
     region: oregon
     buildCommand: |
       apt-get update && \
-      apt-get install -y python-is-python3 build-essential && \
+      apt-get install -y python-is-python3 build-essential pkg-config libsqlite3-dev && \
       npm install --legacy-peer-deps
     startCommand: npm start
     version: "1"
